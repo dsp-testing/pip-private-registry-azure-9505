@@ -1,0 +1,28 @@
+[project]
+name = "dependabot-debugging"
+version = "1.0.0"
+description = "Minimum example to debug Dependabot issue with Poetry and Azure Artifact Feed"
+authors = [
+  { name = "Alexander Lochbaum", email = "alexander.lochbaum@sensirion.com" },
+]
+readme = "README.md"
+license = { text = "Proprietary" }
+requires-python = ">=3.10, <4"
+
+[tool.poetry.dependencies]
+sensirion-nori-func = { version = "~=2.0", source = "nori_artifact_feed" }  # latest version on artifact feed: 2.2.0 --> no update available
+
+[tool.poetry.group.test]
+optional = true
+
+[tool.poetry.group.test.dependencies]
+ruff = "~=0.8.2"  # latest version on pypi: 0.11.12 --> update available
+
+[[tool.poetry.source]]
+name = "nori_artifact_feed"
+url = "https://pkgs.dev.azure.com/Sensirion/SCS-Nori/_packaging/scs/pypi/simple"
+priority = "supplemental"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
