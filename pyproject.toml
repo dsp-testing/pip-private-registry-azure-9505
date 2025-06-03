@@ -21,7 +21,7 @@ sensirion-nori-func = { version = "~=2.0", source = "nori_artifact_feed" }  # la
 optional = true
 
 [tool.poetry.group.test.dependencies]
-ruff = "~=0.8.2"  # latest version on pypi: 0.11.12 --> update available
+ruff = "~=0.11.12"  # latest version on pypi: 0.11.12 --> update available
 
 [[tool.poetry.source]]
 name = "nori_artifact_feed"
