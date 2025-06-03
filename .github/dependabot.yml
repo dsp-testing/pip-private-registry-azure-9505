@@ -1,0 +1,17 @@
+version: 2
+updates:
+  - package-ecosystem: "pip"
+    directory: "/"
+    insecure-external-code-execution: allow
+    versioning-strategy: "increase"
+    schedule:
+      interval: "daily"
+    registries: 
+      - nori_artifact_feed
+
+registries:
+  nori_artifact_feed:
+    type: "python-index"
+    url: "https://pkgs.dev.azure.com/Sensirion/SCS-Nori/_packaging/scs/pypi/simple"
+    username: "token"
+    password: "${{ secrets.GH_SUPPORT_TOKEN }}"
