@@ -9,6 +9,11 @@ readme = "README.md"
 license = { text = "Proprietary" }
 requires-python = ">=3.10, <4"
 
+[tool.poetry]
+name = "dependabot-debugging"
+version = "1.0.0"
+package-mode = false
+
 [tool.poetry.dependencies]
 sensirion-nori-func = { version = "~=2.0", source = "nori_artifact_feed" }  # latest version on artifact feed: 2.2.0 --> no update available
 
