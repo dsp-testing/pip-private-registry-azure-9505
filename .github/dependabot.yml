@@ -12,6 +12,6 @@ updates:
 registries:
   nori_artifact_feed:
     type: "python-index"
-    url: "https://pkgs.dev.azure.com/Sensirion/SCS-Nori/_packaging/scs/pypi/simple"
+    url: "https://pkgs.dev.azure.com/Sensirion/cbee3a7d-c2b2-4f31-9735-d8413aa737f0/_packaging/acc44390-cd71-4021-8072-52780a16072a/pypi/simple/"
     username: "token"
     password: "${{ secrets.GH_SUPPORT_TOKEN }}"
